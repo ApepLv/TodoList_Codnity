@@ -46,7 +46,7 @@ namespace TodoList_Codnity.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _todoListService.AddItemAsync(todoList); 
+                await _todoListService.AddItemAsync(todoList);
                 return RedirectToAction(nameof(Index));
             }
 
@@ -82,7 +82,7 @@ namespace TodoList_Codnity.Controllers
             {
                 try
                 {
-                    await _todoListService.UpdateItemAsync(todoList); 
+                    await _todoListService.UpdateItemAsync(todoList);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -122,10 +122,10 @@ namespace TodoList_Codnity.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var todoList = await _todoListService.GetItemByIdAsync(id); 
+            var todoList = await _todoListService.GetItemByIdAsync(id);
             if (todoList != null)
             {
-                await _todoListService.DeleteItemAsync(id); 
+                await _todoListService.DeleteItemAsync(id);
             }
 
             return RedirectToAction(nameof(Index));
