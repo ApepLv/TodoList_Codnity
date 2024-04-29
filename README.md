@@ -28,6 +28,6 @@ This TodoList application is a simple, user-friendly tool designed to help users
 ![image](https://github.com/ApepLv/TodoList_Codnity/assets/117041265/1d4119a2-6345-4cc9-be0e-b0618e602488)
 
 
-## Dekete
+## Delete
 
 ![image](https://github.com/ApepLv/TodoList_Codnity/assets/117041265/f03cabbc-3056-481d-8dca-c3a6c2bcbc6c)
