@@ -8,17 +8,26 @@ This TodoList application is a simple, user-friendly tool designed to help users
 
 - Create, read, update, and delete tasks
 - Mark tasks as completed
-- Search tasks by title
 - Responsive design
 
-## Getting Started
+## Main Page
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+![image](https://github.com/ApepLv/TodoList_Codnity/assets/117041265/5d52b478-daa7-4e19-bf2b-14efece19eb6)
 
-### Prerequisites
+## Create
 
-What things you need to install the software and how to install them:
+![image](https://github.com/ApepLv/TodoList_Codnity/assets/117041265/81789b76-0885-41b7-b093-5bf5e0a03e6b)
 
-- [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
-- [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) or later
-- SQL Server (Optional, if you plan to use a local SQL instance instead of SQLite)
+## Edit
+
+![image](https://github.com/ApepLv/TodoList_Codnity/assets/117041265/563ef6e4-68bb-4931-93ff-c9de0abf9f5f)
+
+
+## Details
+
+![image](https://github.com/ApepLv/TodoList_Codnity/assets/117041265/1d4119a2-6345-4cc9-be0e-b0618e602488)
+
+
+## Dekete
+
+![image](https://github.com/ApepLv/TodoList_Codnity/assets/117041265/f03cabbc-3056-481d-8dca-c3a6c2bcbc6c)
