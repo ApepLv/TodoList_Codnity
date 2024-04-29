@@ -1,0 +1,53 @@
+﻿@model IEnumerable<TodoList_Codnity.Models.TodoList>
+
+@{
+    ViewData["Title"] = "Todo List";
+}
+
+<h1>Todo List</h1>
+
+<p>
+    <a asp-action="Create"> <button type="button" class="btn btn-primary">Create new task</button></a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @if (Model.Any())
+                {
+                    @Html.DisplayNameFor(model => model.First().Title)
+                }
+            </th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+
+                <td>
+                    @if (item.IsCompleted)
+                    {
+                        <span class="badge bg-success">Completed</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-warning text-dark">In Progress</span>
+                    }
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id"><Button type="button" class="btn btn-primary">Edit</Button></a>
+
+                    <a asp-action="Details" asp-route-id="@item.Id"> <Button type="button" class="btn btn-info">Details</Button></a>
+
+                    <a asp-action="Delete" asp-route-id="@item.Id"><Button type="button" class="btn btn-danger">Delete</Button></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
