@@ -18,12 +18,7 @@
                     @Html.DisplayNameFor(model => model.First().Title)
                 }
             </th>
-            <th>
-                @if (Model.Any())
-                {
-                    @Html.DisplayNameFor(model => model.First().IsCompleted)
-                }
-            </th>
+            <th>Status</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -38,21 +33,11 @@
                 <td>
                     @if (item.IsCompleted)
                     {
-                        <div class="form-check">
-                            <input style="opacity: 1;" class="form-check-input" type="checkbox" checked="checked" disabled id="completedCheckbox@(item.Id)">
-                            <label style="opacity: 1;" class="form-check-label" for="completedCheckbox@(item.Id)">
-                                Completed
-                            </label>
-                        </div>
+                        <span class="badge bg-success">Completed</span>
                     }
                     else
                     {
-                        <div class="form-check">
-                            <input style="opacity: 1;" class="form-check-input is-invalid" type="checkbox" checked="checked" disabled id="completedCheckbox@(item.Id)">
-                            <label style="opacity: 1;" class="form-check-label" for="completedCheckbox@(item.Id)">
-                                In Progress
-                            </label>
-                        </div>
+                        <span class="badge bg-warning text-dark">In Progress</span>
                     }
                 </td>
                 <td>

@@ -6,48 +6,45 @@
 
 <h1>Task Details</h1>
 
-<div>
-    <h4></h4>
-    <hr />TodoList
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.IsCompleted)
-        </dt>
-        <dd class="col-sm-10">
-            @if (Model.IsCompleted)
-            {
-                <div class="form-check">
-                    <input style="opacity:1" class="form-check-input" type="checkbox" checked="checked" disabled id="completedCheckbox@(Model.Id)">
-                    <label style="opacity:1" class="form-check-label" for="completedCheckbox@(Model.Id)">
-                        Completed
-                    </label>
-                </div>
-            }
-            else
-            {
-                <div class="form-check">
-                    <input style="opacity:1" class="form-check-input is-invalid" type="checkbox" checked="checked" disabled id="completedCheckbox@(Model.Id)">
-                    <label style="opacity:1" class="form-check-label" for="completedCheckbox@(Model.Id)">
-                        In Progress
-                    </label>
-                </div>
-            }
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            Task Information
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+                <dt class="col-sm-2">
+                    <th>Status</th>
+                </dt>
+                <dd class="col-sm-10">
+                    <div class="d-flex align-items-center">
+                        @if (Model.IsCompleted)
+                        {
+                            <span class="badge bg-success">Completed</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-warning text-dark">In Progress</span>
+                        }
+                    </div>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div class="mt-3">
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Edit</a>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
 </div>
